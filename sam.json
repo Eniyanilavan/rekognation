@@ -1,0 +1,111 @@
+{
+    'JobStatus': 'IN_PROGRESS'|'SUCCEEDED'|'FAILED',
+    'StatusMessage': 'string',
+    'NextToken': 'string',
+    'VideoMetadata': {
+        'Codec': 'string',
+        'DurationMillis': 123,
+        'Format': 'string',
+        'FrameRate': ...,
+        'FrameHeight': 123,
+        'FrameWidth': 123
+    },
+    'Persons': [
+        {
+            'Timestamp': 123,
+            'Person': {
+                'Index': 123,
+                'BoundingBox': {
+                    'Width': ...,
+                    'Height': ...,
+                    'Left': ...,
+                    'Top': ...
+                },
+                'Face': {
+                    'BoundingBox': {
+                        'Width': ...,
+                        'Height': ...,
+                        'Left': ...,
+                        'Top': ...
+                    },
+                    'AgeRange': {
+                        'Low': 123,
+                        'High': 123
+                    },
+                    'Smile': {
+                        'Value': True|False,
+                        'Confidence': ...
+                    },
+                    'Eyeglasses': {
+                        'Value': True|False,
+                        'Confidence': ...
+                    },
+                    'Sunglasses': {
+                        'Value': True|False,
+                        'Confidence': ...
+                    },
+                    'Gender': {
+                        'Value': 'Male'|'Female',
+                        'Confidence': ...
+                    },
+                    'Beard': {
+                        'Value': True|False,
+                        'Confidence': ...
+                    },
+                    'Mustache': {
+                        'Value': True|False,
+                        'Confidence': ...
+                    },
+                    'EyesOpen': {
+                        'Value': True|False,
+                        'Confidence': ...
+                    },
+                    'MouthOpen': {
+                        'Value': True|False,
+                        'Confidence': ...
+                    },
+                    'Emotions': [
+                        {
+                            'Type': 'HAPPY'|'SAD'|'ANGRY'|'CONFUSED'|'DISGUSTED'|'SURPRISED'|'CALM'|'UNKNOWN',
+                            'Confidence': ...
+                        },
+                    ],
+                    'Landmarks': [
+                        {
+                            'Type': 'eyeLeft'|'eyeRight'|'nose'|'mouthLeft'|'mouthRight'|'leftEyeBrowLeft'|'leftEyeBrowRight'|'leftEyeBrowUp'|'rightEyeBrowLeft'|'rightEyeBrowRight'|'rightEyeBrowUp'|'leftEyeLeft'|'leftEyeRight'|'leftEyeUp'|'leftEyeDown'|'rightEyeLeft'|'rightEyeRight'|'rightEyeUp'|'rightEyeDown'|'noseLeft'|'noseRight'|'mouthUp'|'mouthDown'|'leftPupil'|'rightPupil',
+                            'X': ...,
+                            'Y': ...
+                        },
+                    ],
+                    'Pose': {
+                        'Roll': ...,
+                        'Yaw': ...,
+                        'Pitch': ...
+                    },
+                    'Quality': {
+                        'Brightness': ...,
+                        'Sharpness': ...
+                    },
+                    'Confidence': ...
+                }
+            },
+            'FaceMatches': [
+                {
+                    'Similarity': ...,
+                    'Face': {
+                        'FaceId': 'string',
+                        'BoundingBox': {
+                            'Width': ...,
+                            'Height': ...,
+                            'Left': ...,
+                            'Top': ...
+                        },
+                        'ImageId': 'string',
+                        'ExternalImageId': 'string',
+                        'Confidence': ...
+                    }
+                },
+            ]
+        },
+    ]
+}
